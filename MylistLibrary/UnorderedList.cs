@@ -108,8 +108,19 @@ namespace MylistLibrary
                 temp.Next = null;
             }
 
+        }
 
-
+        //Method used to search element
+        public bool Search(T Data)
+        {
+            Node<T> temp = Head;
+            while (temp != null)
+            {
+                if (temp.Data.CompareTo(Data) == 0)
+                    return true;
+                temp = temp.Next;
+            }
+            return false;
         }
     }
 }

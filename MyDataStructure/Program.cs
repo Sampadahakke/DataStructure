@@ -18,10 +18,15 @@ namespace MyDataStructure
             list.Append(30);
             list.Append(70);
             list.Display();
-            Console.WriteLine("\nDeleting last element");
-            list.PopLast();
-            list.Display();
+            Console.WriteLine("\nSearch result for 30:"+" " + list.Search(30));
+            Console.WriteLine("\nSearch result for 90:"+" " + list.Search(90));
             Console.ReadKey();
+
+
+            //Console.WriteLine("\nDeleting last element");
+            //list.PopLast();
+            //list.Display();
+            //Console.ReadKey();
 
             //Console.WriteLine("Adding 56,30,70 to list");
             //list.Add(76);
