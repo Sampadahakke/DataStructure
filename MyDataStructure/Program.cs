@@ -18,6 +18,14 @@ namespace MyDataStructure
             stack.Push(30);
             stack.Push(70);
             stack.Display();
+            while (stack.IsEmpty() is false)
+            {
+                Console.WriteLine("Top element: " + stack.Peek());
+                Console.WriteLine("Popping....");
+                stack.Pop();
+                Console.WriteLine("List: ");
+                stack.Display();
+            }
             Console.ReadKey();
         }
     }
