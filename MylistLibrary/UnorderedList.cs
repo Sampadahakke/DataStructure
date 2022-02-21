@@ -122,6 +122,55 @@ namespace MylistLibrary
             }
             return false;
         }
+
+        public int Index(T Data)
+        {
+            int index = 0;
+            Node<T> temp = Head;
+            while (temp != null)
+            {
+                if (temp.Data.CompareTo(Data) == 0)
+                    return index;
+                temp = temp.Next;
+                index++;
+            }
+            return -1;
+        }
+
+        //Method used to remove element of list
+        public void Remove(T Data)
+        {
+            if (Head == null)
+                return;
+            if (Head.Data.CompareTo(Data) == 0)
+                Head = Head.Next;
+            else
+            {
+                Node<T> temp = Head;
+                while (temp != null)
+                {
+                    if (temp.Next.Data.CompareTo(Data) == 0)
+                    {
+                        temp.Next = temp.Next.Next;
+                        return;
+                    }
+                    temp = temp.Next;
+                }
+            }
+        }
+
+        //Method used to  getting size of list
+        public int Size()
+        {
+            int Size = 0;
+            Node<T> temp = Head;
+            while(temp != null)
+            {
+                temp=temp.Next;
+                Size++;
+            }
+            return Size;
+        }
     }
 }
 

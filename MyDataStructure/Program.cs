@@ -17,10 +17,24 @@ namespace MyDataStructure
             list.Append(56);
             list.Append(30);
             list.Append(70);
+            Console.WriteLine("Inserting 40 after 30");
+            list.Insert(list.Index(30) + 1, 40);
             list.Display();
-            Console.WriteLine("\nSearch result for 30:"+" " + list.Search(30));
-            Console.WriteLine("\nSearch result for 90:"+" " + list.Search(90));
-            Console.ReadKey();
+            Console.WriteLine("Removing 40 after 30");
+            Console.WriteLine("\nSearch result for 40:" + " " + list.Search(40));
+            list.Remove(40);
+            Console.WriteLine("Size:" + " " + list.Size());
+            Console.ReadKey()
+
+
+            /*Console.WriteLine("Inserting 40 after 30");
+            list.Insert(list.Index(30) + 1, 40);
+            list.Display();
+            *//*  Console.WriteLine("\nSearch result for 30:"+" " + list.Search(30));
+              Console.WriteLine("\nSearch result for 90:"+" " + list.Search(90));*//*
+            Console.ReadKey()*/;
+
+            
 
 
             //Console.WriteLine("\nDeleting last element");
