@@ -12,12 +12,12 @@ namespace MyDataStructure
         static void Main(string[] args)
         {
             Console.WriteLine("=============WELCOME TO DATA STRUCTURE===============");
-            OrderedList<int> list = new OrderedList<int>();
-            Console.WriteLine("Adding 56,30,70 in list");
-            list.Add(56);
-            list.Add(30);
-            list.Add(70);
-            list.Display();
+            MyStack<int>stack = new MyStack<int>();
+            Console.WriteLine( "Creating Stack");
+            stack.Push(56);
+            stack.Push(30);
+            stack.Push(70);
+            stack.Display();
             Console.ReadKey();
         }
     }
