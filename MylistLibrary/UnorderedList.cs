@@ -78,10 +78,52 @@ namespace MylistLibrary
             {
                 Node<T> node = new Node<T>(data);
                 for (int i = 1; i < pos; i++)
-                temp = temp.Next;
+                    temp = temp.Next;
                 node.Next = temp.Next;
                 temp.Next = node;
             }
         }
+
+        //Method used to delete first element
+        public void Pop()
+        {
+            if (Head == null)
+                return;
+            else
+                Head = Head.Next;
+        }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
