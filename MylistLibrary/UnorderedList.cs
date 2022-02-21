@@ -27,13 +27,13 @@ namespace MylistLibrary
         //Method used to create list
         public void Append(T Data)
         {
-            Node <T> node = new Node<T>(Data);
+            Node<T> node = new Node<T>(Data);
             if (Head == null)
-            Head = node;
+                Head = node;
             else
             {
                 Node<T> temp = Head;
-                while(temp.Next != null)
+                while (temp.Next != null)
                     temp = temp.Next;
                 temp.Next = node;
             }
@@ -63,5 +63,25 @@ namespace MylistLibrary
             }
         }
 
+        //Method used to insert 30 between 56 and 76
+        public void Insert(int pos, T data)
+        {
+            Node<T> temp = Head;
+            if (pos < 0)
+            {
+                Console.WriteLine("Invalid position");
+                return;
+            }
+            if (pos == 0)
+                Add(data);
+            else
+            {
+                Node<T> node = new Node<T>(data);
+                for (int i = 1; i < pos; i++)
+                temp = temp.Next;
+                node.Next = temp.Next;
+                temp.Next = node;
+            }
+        }
     }
 }
