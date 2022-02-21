@@ -8,19 +8,23 @@ namespace MylistLibrary
 {
     public class UnorderedList<T> where T : IComparable<T>
     {
+        //Variables
         public Node<T> Head;
 
+        //Initializing Variable With the help of Constructor
         public UnorderedList()
         {
             Head = null;
         }
 
+        //Creates and Returns empty list
         public UnorderedList<T> List()
         {
             UnorderedList<T> emptyList = new UnorderedList<T>();
             return emptyList;
         }
 
+        //Method used to create list
         public void Append(T Data)
         {
             Node <T> node = new Node<T>(Data);
@@ -35,6 +39,7 @@ namespace MylistLibrary
             }
         }
 
+        //Method used to display the list
         public void Display()
         {
             Node<T> temp = Head;
@@ -44,5 +49,19 @@ namespace MylistLibrary
                 temp = temp.Next;
             }
         }
+
+        //Method used to add data in list
+        public void Add(T Data)
+        {
+            Node<T> node = new Node<T>(Data);
+            if (Head == null)
+                Head = node;
+            else
+            {
+                node.Next = Head;
+                Head = node;
+            }
+        }
+
     }
 }
