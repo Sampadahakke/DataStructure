@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MylistLibrary
 {
-    public class UnorderedList<T> where T : IComparable<T>
+    public class UnorderedList<T> where T : IComparable<T> 
     {
         //Variables
         public Node<T> Head;
@@ -45,7 +45,7 @@ namespace MylistLibrary
             Node<T> temp = Head;
             while (temp != null)
             {
-                Console.Write("\n" + temp.Data);
+                Console.Write(temp.Data+" ");
                 temp = temp.Next;
             }
         }
@@ -91,6 +91,25 @@ namespace MylistLibrary
                 return;
             else
                 Head = Head.Next;
+        }
+
+        //Method used to delete last elememt
+        public void PopLast()
+        {
+            if (Head == null)
+                return;
+            if (Head.Next == null)
+                Head = null;
+            else
+            {
+                Node<T> temp = Head;
+                while (temp.Next.Next != null)
+                    temp = temp.Next;
+                temp.Next = null;
+            }
+
+
+
         }
     }
 }

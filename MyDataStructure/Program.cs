@@ -18,8 +18,8 @@ namespace MyDataStructure
             list.Append(30);
             list.Append(70);
             list.Display();
-            Console.WriteLine("\nDeleting first element");
-            list.Pop();
+            Console.WriteLine("\nDeleting last element");
+            list.PopLast();
             list.Display();
             Console.ReadKey();
 
