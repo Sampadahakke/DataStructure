@@ -12,21 +12,17 @@ namespace MyDataStructure
         static void Main(string[] args)
         {
             Console.WriteLine("=============WELCOME TO DATA STRUCTURE===============");
-            MyStack<int>stack = new MyStack<int>();
-            Console.WriteLine( "Creating Stack");
-            stack.Push(56);
-            stack.Push(30);
-            stack.Push(70);
-            stack.Display();
-            while (stack.IsEmpty() is false)
-            {
-                Console.WriteLine("Top element: " + stack.Peek());
-                Console.WriteLine("Popping....");
-                stack.Pop();
-                Console.WriteLine("List: ");
-                stack.Display();
-            }
+            QueueList<int> queue = new QueueList<int>();
+
+            Console.WriteLine("create a Queue of 56->30->70");
+            queue.Enqueue(56);
+            queue.Enqueue(30);
+            queue.Enqueue(70);
+            Console.WriteLine("Queue: ");
+            queue.Display();
             Console.ReadKey();
+            
         }
+
     }
 }
