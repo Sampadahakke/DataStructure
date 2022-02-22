@@ -6,17 +6,17 @@ using System.Threading.Tasks;
 
 namespace MylistLibrary
 {
-    public class QueueList<T> : MyLinkedList<T> where T : IComparable
+    public class MyStack<T> : MyLinkedList<T> where T : IComparable
     {
-        public static QueueList<T> Queue()
+        public static MyStack<T> Queue()
         {
-            return new  QueueList<T>();
+            return new  MyStack<T>();
         }
 
         //Method used to create list
-        public void Enqueue(T Data)
+        public void Push(T Data)
         {
-            Append(Data);
+            Add(Data);
         }
 
         public T Peek()
@@ -24,7 +24,7 @@ namespace MylistLibrary
             return Head.Data;
         }
 
-        public new void Dequeue()
+        public new void Pop()
         {
             base.Pop();
         }

@@ -12,7 +12,7 @@ namespace MyDataStructure
         static void Main(string[] args)
         {
             Console.WriteLine("=============WELCOME TO DATA STRUCTURE===============");
-            QueueList<int> queue = new QueueList<int>();
+            MyQueue<int> queue = new MyQueue<int>();
 
             Console.WriteLine("create a Queue of 56->30->70");
             queue.Enqueue(56);
